@@ -535,7 +535,6 @@ main {
         gap: 0;
     }
     
-    /* Zmiana siatek produktowych i filarów na 1 kolumnę */
     .zakładki-grid, .flota {
         grid-template-columns: 1fr;
     }
@@ -543,4 +542,6 @@ main {
     .form-card {
         padding: 2rem 1.5rem;
     }
+
 }
+
