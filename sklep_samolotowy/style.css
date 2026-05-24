@@ -1,0 +1,10 @@
+/*kolory-rozpiska*/
+:root {
+    --bg-dark: #0a0d14;         /* Gbackground */
+    --gold: #c5a059;            /* zl */
+    --gold-light: #e5c58d;      /* jasnyzl */
+    --text-light: #f3f4f6;      /* jasny tekst */
+    --text-dark: #111827;       /* d.t-ciemny */
+    --bg-light: #ffffff;        /* panele tekstowe */
+    --border-color: #222938;    /* borders */
+}
