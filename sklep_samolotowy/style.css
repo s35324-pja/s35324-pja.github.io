@@ -331,6 +331,7 @@ main {
 .jet-bg-1 { background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 1px solid var(--gold); }
 .jet-bg-2 { background: linear-gradient(135deg, #374151, #1f2937); border-bottom: 1px solid var(--gold); }
 .jet-bg-3 { background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 1px solid var(--gold); }
+.jet-bg-4 { background: linear-gradient(135deg, #374151, #1f2937); border-bottom: 1px solid var(--gold); }
 
 .jet-card-txt {
     padding: 2.5rem;
