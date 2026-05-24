@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapytanie Charterowe VIP | AeroPrivé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="premium-header">
+        <div class="header-container">
+            <div class="brand-logo">AERO<span>PRIVÉ</span></div>
+            <nav class="premium-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Flota Elite</a></li>
+                    <li><a href="flota.html" class="nav-link">Nasza Flota</a></li>
+                    <li><a href="charter.html" class="nav-link active">Zapytanie Charterowe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-padding">
+        <section class="charter-container">
+            <div class="charter-form-header">
+                <h2>Inicjacja Prywatnego Rejsu</h2>
+                <p>Wypełnij poniższe dane, aby przydzielony do Ciebie opiekun luksusowy przygotował wstępną wycenę i plan logistyczny lotu w ciągu 15 minut.</p>
+            </div>
+
+            <div class="charter-split-layout">
+                <div class="form-luxury-card">
+                    <form action="#" method="POST" class="luxury-form">
+                        <div class="form-row-twin">
+                            <div class="form-group">
+                                <label for="vip-name">Imię i Nazwisko Pasażera Głównego</label>
+                                <input type="text" id="vip-name" name="vip-name" placeholder="Ew. Nazwa Podmiotu Prawnego" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vip-email">Prywatny Adres E-mail</label>
+                                <input type="email" id="vip-email" name="vip-email" placeholder="secured@domain.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-twin">
+                            <div class="form-group">
+                                <label for="route-from">Miejsce Wylotu (Lotnisko / Miasto)</label>
+                                <input type="text" id="route-from" name="route-from" placeholder="np. Warszawa (EPWA)" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="route-to">Destynacja Docelowa</label>
+                                <input type="text" id="route-to" name="route-to" placeholder="np. Nicea (LFMN)" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jet-class">Pożądana Klasa Statku Powietrznego</label>
+                            <select id="jet-class" name="jet-class">
+                                <option value="ultra">Ultra Long Range (np. Gulfstream G650ER)</option>
+                                <option value="super">Super Midsize Jet (np. Challenger 350)</option>
+                                <option value="light">Light Jet (np. Citation CJ4)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="special-wishes">Wymagania Specjalne (Concierge, Catering, Zwierzęta na pokładzie)</label>
+                            <textarea id="special-wishes" name="special-wishes" rows="4" placeholder="np. Obsługa limousine-to-aircraft, dedykowane menu wegańskie, transport dzieł sztuki..."></textarea>
+                        </div>
+
+                        <button type="submit" class="gold-submit-btn">Wyślij Poufne Zapytanie</button>
+                    </form>
+                </div>
+
+                <div class="concierge-info-card">
+                    <h3>AeroPrivé Global Concierge</h3>
+                    <div class="small-divider"></div>
+                    <p class="concierge-desc">Nasz zespół operacyjny monitoruje przestrzeń powietrzną i dostępność maszyn 24/7/365.</p>
+                    
+                    <div class="contact-details-block">
+                        <p><strong>Infolinia VIP:</strong> +00 000 000 000</p>
+                        <p><strong>Dedykowany E-mail:</strong> s35324@pjwstk.edu.pl</p>
+                        <p><strong>Główna Siedziba:</strong> Warszawa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 AeroPrivé Luxury Aviation. Wszelkie prawa zastrzeżone.</p>
+            <p class="student-credits">Projekt: <strong>Hanna Drozdowska</strong> | Indeks studenta: <strong>s35324</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
