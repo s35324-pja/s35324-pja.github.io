@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapytanie Charterowe VIP | AeroPrivé</title>
+    <title>Formularz | AeroPrivé</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,23 +24,23 @@
     <main class="page-padding">
         <section class="charter-container">
             <div class="charter-form-header">
-                <h2>Inicjacja Prywatnego Rejsu</h2>
-                <p>Wypełnij poniższe dane, aby przydzielony do Ciebie opiekun luksusowy przygotował wstępną wycenę i plan logistyczny lotu w ciągu 15 minut.</p>
+                <h2>Formularz Prywatnego Rejsu</h2>
+                <p>Wypełnij poniższe dane, aby przydzielony do Ciebie opiekun luksusowy przygotował wstępną wycenę i w pełni optymalny plan logistyczny lotu twojego lotu.</p>
             </div>
 
             <div class="charter-roz">
                 <div class="form-card">
                     <form action="#" method="POST" class="form">
-                        <div class="form-row-twin">
+                        
                             <div class="form-group">
                                 <label for="vip-name">Imię i Nazwisko Pasażera Głównego</label>
-                                <input type="text" id="vip-name" name="vip-name" placeholder="Ew. Nazwa Podmiotu Prawnego" required>
+                                <input type="text" id="vip-name" name="vip-name" placeholder="Imię i Nazwisko" required>
                             </div>
                             <div class="form-group">
                                 <label for="vip-email">Prywatny Adres E-mail</label>
-                                <input type="email" id="vip-email" name="vip-email" placeholder="secured@domain.com" required>
+                                <input type="email" id="vip-email" name="vip-email" placeholder="adres@przykładowy.com" required>
                             </div>
-                        </div>
+                        
 
                         <div class="form-row-twin">
                             <div class="form-group">
@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="route-to">Destynacja Docelowa</label>
-                                <input type="text" id="route-to" name="route-to" placeholder="np. Nicea (LFMN)" required>
+                                <input type="text" id="route-to" name="route-to" placeholder="np. New York (JFK)" required>
                             </div>
                         </div>
 
@@ -57,14 +57,14 @@
                             <label for="jet-class">Pożądana Klasa Statku Powietrznego</label>
                             <select id="jet-class" name="jet-class">
                                 <option value="ultra">Ultra Long Range (np. Gulfstream G650ER)</option>
-                                <option value="super">Super Midsize Jet (np. Challenger 350)</option>
-                                <option value="light">Light Jet (np. Citation CJ4)</option>
+                                <option value="super">Super Midsize Jet (np. Bombardier Challenger 350)</option>
+                                <option value="light">Light Jet (np. Cessna Citation CJ4)</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="special-wishes">Wymagania Specjalne (Concierge, Catering, Zwierzęta na pokładzie)</label>
-                            <textarea id="special-wishes" name="special-wishes" rows="4" placeholder="np. Obsługa limousine-to-aircraft, dedykowane menu wegańskie, transport dzieł sztuki..."></textarea>
+                            <label for="special-w">Wymagania Specjalne (Concierge, Catering, Zwierzęta na pokładzie)</label>
+                            <textarea id="special-w" name="special-wishes" rows="4" placeholder="np. Obsługa limousine-to-aircraft, dedykowane menu wegańskie, transport dzieł sztuki..."></textarea>
                         </div>
 
                         <button type="submit" class="gold-submit-btn">Wyślij Poufne Zapytanie</button>
