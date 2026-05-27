@@ -148,7 +148,7 @@ img {
 .flota__svg {
     height: 40px;
     width: auto;
-    filter: invert(79%) sepia(13%) saturate(735%);
+    filter: brightness(0) saturate(100%) invert(75%) sepia(19%) saturate(740%) hue-rotate(354deg) brightness(89%) contrast(85%);
 }
 
 .aircraft__title {
