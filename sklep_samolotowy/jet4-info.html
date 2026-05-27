@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AeroPrivé | Prywatne Odrzutowce i Luksusowe Podróże</title>
     <link rel="stylesheet" href="style1.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -22,50 +24,64 @@
     </header>
 
     <section class="section-flota">
-    <span class="aircraft__gallery-background--anchor"></span>
-                        <div id="plane-3463" class="aircraft aircraft--active">
-                            <div class="aircraft__details">
-                                <div class="aircraft__ico">
-                                    <img src="https://jetstory.com/bin/d727f89a00db886e82d4105adc9e6095.svg" alt="" class="flota__svg">
-                                </div>
-                                    <h2 class="aircraft__title">Embraer Legacy 600</h2>
-                                    <ul class="aircraft__list">
-                                        <li class="aircraft__item">Liczba miejsc:<span class="aircraft__item-light"> 13 </span></li>
-                                        <li class="aircraft__item">Prędkość przelotowa:<span class="aircraft__item-light"> 835 km/h </span></li>
-                                        <li class="aircraft__item">Stewardesy:<span class="aircraft__item-light">1+1</span></li>
-                                        <li class="aircraft__item">Toaleta:<span class="aircraft__item-light"> tak </span></li>
-                                        <li class="aircraft__item">Posiłki ciepłe/zimne:<span class="aircraft__item-light"> tak / tak </span></li>
-                                        <li class="aircraft__item">Piloci:<span class="aircraft__item-light"> 2 </span></li>
-                                        <li class="aircraft__item">Zasięg:<span class="aircraft__item-light"> 6 000 km </span></li>
-                                    </ul>
-                                    <img src="https://jetstory.com/bin/b37a03818cc8b44597b198beb267d55e.svg" alt="" class="aircraft__map">
-                                    <a href="https://jetstory.com/kontakt/?plane=plane-3463#zamow-wycene" class="aircraft__button button button--1">Zarezerwuj lot</a>
-                                </div>
-                                    <div class="aircraft__gallery-container">
-                                        <div class="swiper-container aircraft__gallery aircraft__gallery--zoom aircraft__gallery--js swiper-container-initialized swiper-container-horizontal is--active">
-                                            <div class="swiper-wrapper" style="transform: transition-duration: 0ms;">
-                                                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" alt="" class="swiper-slide aircraft__img swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="4" style="width: 646px;">
-                                                <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=800&q=80" alt="" class="swiper-slide aircraft__img swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 646px;">
-                                                <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=800&q=80" alt="" class="swiper-slide aircraft__img" data-swiper-slide-index="1" style="width: 646px;">
-                                                <img src="https://ipla.pluscdn.pl/dituel/cp/e4/e4p13py7prbpgumb17mvq5tfxyscnqui.jpg" alt="" class="swiper-slide aircraft__img" data-swiper-slide-index="2" style="width: 646px;">
-                                                <img src="https://ipla.pluscdn.pl/dituel/cp/7n/7neyyhfn133gpfu5fv2694x8qrnow3iz.jpg" alt="" class="swiper-slide aircraft__img swiper-slide-prev" data-swiper-slide-index="3" style="width: 646px;">
-                                                <img src="https://ipla.pluscdn.pl/dituel/cp/ht/ht5bwx96ih484fz7ns2rkt39kz1486ek.jpg" alt="" class="swiper-slide aircraft__img swiper-slide-active" data-swiper-slide-index="4" style="width: 646px;">
-                                                <img src="https://ipla.pluscdn.pl/dituel/cp/zb/zbcfusjgo625j4omzcwvgz42dtr7vvys.jpg" alt="" class="swiper-slide aircraft__img swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 646px;">
-                                            </div>
-                                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-                                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
-                                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
-                                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
-                                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 5"></span>
-                                            </div>
-                                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                                        </div>
-                                    </div>
-                                </div>
+        <span class="aircraft__gallery-background--anchor"></span>
+        <div id="plane-3463" class="aircraft aircraft--active">
+            <div class="aircraft__details">
+                <div class="aircraft__ico">
+                    <img src="https://jetstory.com/bin/d727f89a00db886e82d4105adc9e6095.svg" alt="" class="flota__svg">
+                </div>
+                <h2 class="aircraft__title">Embraer Legacy 600</h2>
+                <ul class="aircraft__list">
+                    <li class="aircraft__item">Liczba miejsc:<span class="aircraft__item-light"> 13 </span></li>
+                    <li class="aircraft__item">Prędkość przelotowa:<span class="aircraft__item-light"> 835 km/h </span></li>
+                    <li class="aircraft__item">Stewardesy:<span class="aircraft__item-light">1+1</span></li>
+                    <li class="aircraft__item">Toaleta:<span class="aircraft__item-light"> tak </span></li>
+                    <li class="aircraft__item">Posiłki ciepłe/zimne:<span class="aircraft__item-light"> tak / tak </span></li>
+                    <li class="aircraft__item">Piloci:<span class="aircraft__item-light"> 2 </span></li>
+                    <li class="aircraft__item">Zasięg:<span class="aircraft__item-light"> 6 000 km </span></li>
+                </ul>
+                <img src="https://jetstory.com/bin/b37a03818cc8b44597b198beb267d55e.svg" alt="" class="aircraft__map">
+                <a href="https://jetstory.com/kontakt/?plane=plane-3463#zamow-wycene" class="aircraft__button button button--1">Zarezerwuj lot</a>
+            </div>
+            
+            <div class="aircraft__gallery-container">
+                <div class="swiper aircraft__gallery">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" alt="" class="aircraft__img"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=800&q=80" alt="" class="aircraft__img"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=800&q=80" alt="" class="aircraft__img"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" alt="" class="aircraft__img"></div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.aircraft__gallery', {
+                loop: true,
+                speed: 600,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+    </script>
 </body>
-</html>                 
-                                   
-                            
-                                           
+</html>

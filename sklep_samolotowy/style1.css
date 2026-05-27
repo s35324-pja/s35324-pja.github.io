@@ -8,12 +8,12 @@
 }
 
 :root {
-    --color-bg-dark: #0d0f12;       /* Głębokie tło */
-    --color-bg-card: #16191e;       /* Tło karty/sekcji details */
-    --color-gold: #c5a880;          /* Szlachetne złoto premium */
-    --color-gold-hover: #b3946b;    /* Ciemniejsze złoto po najechaniu */
-    --color-text-main: #ffffff;     /* Główny biały tekst */
-    --color-text-muted: #8a929a;    /* Szary tekst dla mniejszych detali */
+    --color-bg-dark: #0d0f12;
+    --color-bg-card: #16191e;
+    --color-gold: #c5a880;
+    --color-gold-hover: #b3946b;
+    --color-text-main: #ffffff;
+    --color-text-muted: #8a929a;
     --font-primary: 'Montserrat', 'Helvetica Neue', sans-serif;
     --transition: all 0.3s ease;
 }
@@ -42,7 +42,7 @@ img {
 }
 
 /* ==========================================================================
-   2. NAGŁÓWEK (HEADER & NAV)
+   2. NAGŁÓWEK (HEADER)
    ========================================================================== */
 .header {
     background-color: rgba(13, 15, 18, 0.95);
@@ -94,7 +94,6 @@ img {
     color: var(--color-gold);
 }
 
-/* Subtelna linia pod aktywnym/najechanym linkiem */
 .nav-link::after {
     content: '';
     position: absolute;
@@ -112,7 +111,7 @@ img {
 }
 
 /* ==========================================================================
-   3. SEKCJA PREZENTACJI SAMOLOTU (AIRCRAFT SECTION)
+   3. SEKCJA GLÓWNA (AIRCRAFT WIDGET)
    ========================================================================== */
 .section-flota {
     padding: 60px 20px;
@@ -123,7 +122,6 @@ img {
 .aircraft {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
     background-color: var(--color-bg-card);
     border-radius: 12px;
     overflow: hidden;
@@ -131,14 +129,15 @@ img {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Na większych ekranach dzielimy sekcję na pół */
 @media (min-width: 992px) {
     .aircraft {
         grid-template-columns: 1fr 1fr;
+        /* Wymuszamy, żeby obie kolumny (tekst i zdjęcia) miały idealnie równą wysokość */
+        align-items: stretch; 
     }
 }
 
-/* Szczegóły samolotu (Lewa strona) */
+/* Szczegóły (Lewa kolumna) */
 .aircraft__details {
     padding: 40px;
     display: flex;
@@ -153,7 +152,7 @@ img {
 .flota__svg {
     height: 40px;
     width: auto;
-    filter: invert(79%) sepia(13%) saturate(735%) edit-by-hand; /* Nadanie koloru złotego ikonie, jeśli to SVG */
+    filter: invert(79%) sepia(13%) saturate(735%);
 }
 
 .aircraft__title {
@@ -168,7 +167,6 @@ img {
     width: max-content;
 }
 
-/* Lista parametrów technicznych */
 .aircraft__list {
     margin-bottom: 30px;
 }
@@ -188,16 +186,14 @@ img {
     font-weight: 600;
 }
 
-/* Mapa zasięgu */
 .aircraft__map {
     margin: 20px 0 30px 0;
     opacity: 0.8;
-    max-height: 150px;
+    max-height: 120px;
     object-fit: contain;
-    filter: grayscale(100%) invert(1); /* Dopasowanie mapy do ciemnego motywu */
+    filter: grayscale(100%) invert(1);
 }
 
-/* Przycisk rezerwacji */
 .button--1 {
     display: block;
     text-align: center;
@@ -218,37 +214,41 @@ img {
     box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
 }
 
-/* Galeria zdjęć (Prawa strona) */
+/* ==========================================================================
+   4. LUKSUSOWA GALERIA (Prawa kolumna)
+   ========================================================================== */
 .aircraft__gallery-container {
     position: relative;
-    min-height: 400px;
-    background-color: #000;
+    width: 100%;
+    min-height: 400px; /* Bezpieczna wysokość na mobile */
+}
+
+@media (min-width: 992px) {
+    .aircraft__gallery-container {
+        min-height: 100%; /* Rozciąga kontener do pełnej wysokości lewej kolumny tekstu */
+        height: 100%;
+    }
 }
 
 .aircraft__gallery {
-    height: 100%;
+    position: absolute !important; /* Wymuszenie na Swiperze wypełnienia całego czarnego boku */
+    top: 0;
+    left: 0;
     width: 100%;
-    position: relative;
+    height: 100%;
 }
 
-/* Układ siatki dla zdjęć wewnątrz Swipera w przypadku braku aktywnego JS */
-.swiper-wrapper {
-    display: flex;
-    height: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+.aircraft__gallery .swiper-slide {
+    height: 100%; /* Każdy slajd musi mieć pełną wysokość */
 }
 
 .aircraft__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    transition: var(--transition);
+    object-fit: cover; /* Zdjęcie wypełnia przestrzeń bez zniekształceń */
 }
 
-/* Efekt delikatnego przyciemnienia zdjęć, aby pasowały do klimatu luxury */
+/* Elegancka, ciemna nakładka na dole zdjęć */
 .aircraft__gallery-container::after {
     content: '';
     position: absolute;
@@ -256,60 +256,70 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(22, 25, 30, 0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(22, 25, 30, 0.95) 100%);
     pointer-events: none;
+    z-index: 2;
 }
 
-/* Kropki paginacji Swipera */
-.swiper-pagination-clickable {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+/* ==========================================================================
+   5. NOWOCZESNE STRZAŁKI I PAGINACJA PREMIMUM
+   ========================================================================== */
+/* Kropki */
+.aircraft__gallery .swiper-pagination {
+    bottom: 25px !important;
     z-index: 10;
-    display: flex;
-    gap: 8px;
 }
 
-.swiper-pagination-bullet {
+.aircraft__gallery .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    cursor: pointer;
+    opacity: 1;
     transition: var(--transition);
 }
 
-.swiper-pagination-bullet:hover,
-.swiper-pagination-bullet-active { /* Wsparcie klasy aktywnej ze Swiper.js */
+.aircraft__gallery .swiper-pagination-bullet-active {
     background-color: var(--color-gold);
     transform: scale(1.2);
 }
 
-/* Zaktualizuj te fragmenty w swoim pliku style.css */
-
-.swiper-wrapper {
-    display: flex;
-    height: 100%;
-    /* Usuwamy stąd overflow, ponieważ Swiper.js zarządza tym sam za pomocą transformacji */
+/* Strzałki boczne */
+.aircraft__gallery .swiper-button-prev,
+.aircraft__gallery .swiper-button-next {
+    width: 46px;
+    height: 46px;
+    background-color: rgba(13, 15, 18, 0.7);
+    border: 1px solid rgba(197, 168, 128, 0.3);
+    color: var(--color-gold) !important; /* Nadpisanie domyślnego niebieskiego koloru Swipera */
+    border-radius: 50%;
+    z-index: 10;
+    transition: var(--transition);
 }
 
-.aircraft__img {
-    width: 100% !important; /* Wymuszamy, aby obrazek dopasowywał się do kontenera slajdu */
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
+/* Poprawka wielkości domyślnych strzałek Swipera */
+.aircraft__gallery .swiper-button-prev::after,
+.aircraft__gallery .swiper-button-next::after {
+    font-size: 16px !important;
+    font-weight: bold;
 }
 
-.aircraft__gallery {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden; /* Dodajemy ukrywanie wychodzących slajdów tutaj */
+.aircraft__gallery .swiper-button-prev:hover,
+.aircraft__gallery .swiper-button-next:hover {
+    background-color: var(--color-gold);
+    color: #0d0f12 !important;
+    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+}
+
+.aircraft__gallery .swiper-button-prev {
+    left: 25px;
+}
+
+.aircraft__gallery .swiper-button-next {
+    right: 25px;
 }
 
 /* ==========================================================================
-   4. DODATKOWE USPRAWNIENIA RESPONSYWNE
+   6. RESPONSIVNESS (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 768px) {
     .header-container {
@@ -318,10 +328,20 @@ img {
     }
     
     .aircraft__details {
-        padding: 25px;
+        padding: 30px 20px;
     }
     
     .aircraft__title {
         font-size: 26px;
+    }
+    
+    .aircraft__gallery-container {
+        min-height: 350px; /* Dobrze dobrana proporcja na ekrany telefonów */
+    }
+
+    /* Ukrywamy strzałki na mobile – tam zdjęcia wygodniej przewija się palcem */
+    .aircraft__gallery .swiper-button-prev,
+    .aircraft__gallery .swiper-button-next {
+        display: none !important;
     }
 }
