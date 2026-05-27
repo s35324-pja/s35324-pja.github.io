@@ -1,18 +1,19 @@
 /*kolory-rozpiska*/
+/*var(--nazwa);*/
 :root {
-    --bg-dark: #0a0d14;         /* Gbackground */
-    --gold: #c5a059;            /* zl */
-    --gold-light: #e5c58d;      /* jasnyzl- hover*/
-    --text-light: #f3f4f6;      /* jasny tekst */
-    --text-dark: #111827;       /* d.t-ciemny */
-    --bg-light: #ffffff;        /* panele tekstowe */
-    --border-color: #222938;    /* borders */
+    --dark: #0a0d14;/* Gbackground */
+    --gold: #c5a059;/* zl */
+    --goldL: #e5c58d;/* jasnyzl- hover*/
+    --text: #f3f4f6;/* jasny tekst */
+    --textD: #111827;/* d.t-ciemny */
+    --light: #ffffff;/* panele tekstowe-tło */
+    --border: #222938;/* borders */
 }
 
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--dark);
+    color: var(--text);
     font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;
     letter-spacing: 0.5px;
     line-height: 1.7;
@@ -27,7 +28,7 @@ main {
 
 .header {
     background-color: rgba(10, 13, 20, 0.95);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -48,7 +49,7 @@ main {
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: var(--text-light);
+    color: var(--text);
 }
 .brand-logo span {
     color: var(--gold);
@@ -101,7 +102,7 @@ main {
 .text-side h1 {
     font-size: 3.5rem;
     line-height: 1.15;
-    color: var(--text-light);
+    color: var(--text);
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -119,7 +120,7 @@ main {
 
 .gold-button {
     background-color: var(--gold);
-    color: var(--bg-dark);
+    color: var(--dark);
     text-decoration: none;
     padding: 1rem 2.5rem;
     font-weight: 700;
@@ -131,13 +132,13 @@ main {
 }
 
 .gold-button:hover {
-    background-color: var(--gold-light);
+    background-color: var(--goldL);
 }
 
 .secondary-button {
     background-color: transparent;
-    color: var(--text-light);
-    border: 1px solid var(--border-color);
+    color: var(--text);
+    border: 1px solid var(--border);
     text-decoration: none;
     padding: 1rem 2.5rem;
     font-weight: 600;
@@ -220,7 +221,7 @@ main {
 
 .zakładki-item {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     padding: 3rem 2rem;
     transition: border-color 0.3s;
 }
@@ -240,7 +241,7 @@ main {
     font-size: 1.4rem;
     font-weight: 400;
     margin-bottom: 1rem;
-    color: var(--text-light);
+    color: var(--text);
 }
 
 .zakładki-item p {
@@ -298,7 +299,7 @@ main {
 
 .table td {
     padding: 1.2rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border);
     font-size: 0.95rem;
     color: #d1d5db;
 }
@@ -319,7 +320,7 @@ main {
 
 .jet-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     overflow: hidden;
 }
 
@@ -360,7 +361,7 @@ main {
 }
 
 .jet-card-link:hover {
-    color: var(--gold-light);
+    color: var(--goldL);
 }
 
 
@@ -386,7 +387,7 @@ main {
 .form-card {
     flex: 2;
     background-color: rgba(255, 255, 255, 0.01);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     padding: 3.5rem;
 }
 
@@ -424,8 +425,8 @@ main {
 .form input, .form select, .form textarea {
     width: 100%;
     background-color: #111520;
-    border: 1px solid var(--border-color);
-    color: var(--text-light);
+    border: 1px solid var(--border);
+    color: var(--text);
     padding: 1rem;
     font-family: inherit;
     font-size: 0.95rem;
@@ -439,7 +440,7 @@ main {
 
 .gold-submit-btn {
     background-color: var(--gold);
-    color: var(--bg-dark);
+    color: var(--dark);
     border: none;
     width: 100%;
     padding: 1.2rem;
@@ -452,7 +453,7 @@ main {
 }
 
 .gold-submit-btn:hover {
-    background-color: var(--gold-light);
+    background-color: var(--goldL);
 }
 
 .info-card h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; }
@@ -467,7 +468,7 @@ main {
 
 .footer {
     background-color: #05070b;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border);
     padding: 3rem 0;
     font-size: 0.85rem;
     color: #6b7280;
