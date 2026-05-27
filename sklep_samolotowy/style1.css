@@ -1,0 +1,305 @@
+/* ==========================================================================
+   1. RESET I USTAWIENIA GLOBALNE
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-bg-dark: #0d0f12;       /* Głębokie tło */
+    --color-bg-card: #16191e;       /* Tło karty/sekcji details */
+    --color-gold: #c5a880;          /* Szlachetne złoto premium */
+    --color-gold-hover: #b3946b;    /* Ciemniejsze złoto po najechaniu */
+    --color-text-main: #ffffff;     /* Główny biały tekst */
+    --color-text-muted: #8a929a;    /* Szary tekst dla mniejszych detali */
+    --font-primary: 'Montserrat', 'Helvetica Neue', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   2. NAGŁÓWEK (HEADER & NAV)
+   ========================================================================== */
+.header {
+    background-color: rgba(13, 15, 18, 0.95);
+    border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--color-text-main);
+}
+
+.brand-logo span {
+    color: var(--color-gold);
+    font-weight: 300;
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--color-gold);
+}
+
+/* Subtelna linia pod aktywnym/najechanym linkiem */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-gold);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. SEKCJA PREZENTACJI SAMOLOTU (AIRCRAFT SECTION)
+   ========================================================================== */
+.section-flota {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aircraft {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    background-color: var(--color-bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Na większych ekranach dzielimy sekcję na pół */
+@media (min-width: 992px) {
+    .aircraft {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Szczegóły samolotu (Lewa strona) */
+.aircraft__details {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aircraft__ico {
+    margin-bottom: 15px;
+}
+
+.flota__svg {
+    height: 40px;
+    width: auto;
+    filter: invert(79%) sepia(13%) saturate(735%) edit-by-hand; /* Nadanie koloru złotego ikonie, jeśli to SVG */
+}
+
+.aircraft__title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: var(--color-text-main);
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: 10px;
+    display: inline-block;
+    width: max-content;
+}
+
+/* Lista parametrów technicznych */
+.aircraft__list {
+    margin-bottom: 30px;
+}
+
+.aircraft__item {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aircraft__item-light {
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+/* Mapa zasięgu */
+.aircraft__map {
+    margin: 20px 0 30px 0;
+    opacity: 0.8;
+    max-height: 150px;
+    object-fit: contain;
+    filter: grayscale(100%) invert(1); /* Dopasowanie mapy do ciemnego motywu */
+}
+
+/* Przycisk rezerwacji */
+.button--1 {
+    display: block;
+    text-align: center;
+    background-color: var(--color-gold);
+    color: #0d0f12;
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+}
+
+.button--1:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
+}
+
+/* Galeria zdjęć (Prawa strona) */
+.aircraft__gallery-container {
+    position: relative;
+    min-height: 400px;
+    background-color: #000;
+}
+
+.aircraft__gallery {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* Układ siatki dla zdjęć wewnątrz Swipera w przypadku braku aktywnego JS */
+.swiper-wrapper {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.aircraft__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    transition: var(--transition);
+}
+
+/* Efekt delikatnego przyciemnienia zdjęć, aby pasowały do klimatu luxury */
+.aircraft__gallery-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(22, 25, 30, 0.9) 100%);
+    pointer-events: none;
+}
+
+/* Kropki paginacji Swipera */
+.swiper-pagination-clickable {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet-active { /* Wsparcie klasy aktywnej ze Swiper.js */
+    background-color: var(--color-gold);
+    transform: scale(1.2);
+}
+
+/* ==========================================================================
+   4. DODATKOWE USPRAWNIENIA RESPONSYWNE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .aircraft__details {
+        padding: 25px;
+    }
+    
+    .aircraft__title {
+        font-size: 26px;
+    }
+}
