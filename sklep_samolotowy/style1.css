@@ -286,6 +286,28 @@ img {
     transform: scale(1.2);
 }
 
+/* Zaktualizuj te fragmenty w swoim pliku style.css */
+
+.swiper-wrapper {
+    display: flex;
+    height: 100%;
+    /* Usuwamy stąd overflow, ponieważ Swiper.js zarządza tym sam za pomocą transformacji */
+}
+
+.aircraft__img {
+    width: 100% !important; /* Wymuszamy, aby obrazek dopasowywał się do kontenera slajdu */
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.aircraft__gallery {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Dodajemy ukrywanie wychodzących slajdów tutaj */
+}
+
 /* ==========================================================================
    4. DODATKOWE USPRAWNIENIA RESPONSYWNE
    ========================================================================== */
