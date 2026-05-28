@@ -1,25 +1,20 @@
 
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 :root {
-    --color-bg-dark: #0d0f12;
-    --color-bg-card: #16191e;
-    --color-gold: #c5a880;
-    --color-gold-hover: #b3946b;
-    --color-text-main: #ffffff;
-    --color-text-muted: #8a929a;
+    --dark: #0d0f12;
+    --contener: #16191e;
+    --gold-l: #c5a880;
+    --gold-d: #b3946b;
+    --nag-text: #ffffff;
+    --text: #8a929a;
     --font-primary: 'Montserrat', 'Helvetica Neue', sans-serif;
     --transition: all 0.3s ease;
 }
 
 body {
     font-family: var(--font-primary);
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-main);
+    background-color: var(--dark);
+    color: var(--nag-text);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -64,11 +59,11 @@ img {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 4px;
-    color: var(--color-text-main);
+    color: var(--nag-text);
 }
 
 .brand-logo span {
-    color: var(--color-gold);
+    color: var(--gold-l);
     font-weight: 300;
 }
 
@@ -82,14 +77,14 @@ img {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-text-muted);
+    color: var(--text);
     padding: 5px 0;
     position: relative;
 }
 
 .nav-link:hover, 
 .nav-link.active {
-    color: var(--color-gold);
+    color: var(--gold-l);
 }
 
 .nav-link::after {
@@ -99,7 +94,7 @@ img {
     left: 0;
     width: 0;
     height: 1px;
-    background-color: var(--color-gold);
+    background-color: var(--gold-l);
     transition: var(--transition);
 }
 
@@ -118,7 +113,7 @@ img {
 .aircraft {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: var(--color-bg-card);
+    background-color: var(--contener);
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -127,8 +122,7 @@ img {
 
 @media (min-width: 992px) {
     .aircraft {
-        grid-template-columns: 1fr 1fr;
-        /* Wymuszamy, żeby obie kolumny (tekst i zdjęcia) miały idealnie równą wysokość */
+        grid-template-columns: 1fr 1fr;/* obie kolumny(tekst i zdjęcia) mają idealnie równą wysokość */
         align-items: stretch; 
     }
 }
@@ -156,8 +150,8 @@ img {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 25px;
-    color: var(--color-text-main);
-    border-bottom: 2px solid var(--color-gold);
+    color: var(--nag-text);
+    border-bottom: 2px solid var(--gold-l);
     padding-bottom: 10px;
     display: inline-block;
     width: max-content;
@@ -169,7 +163,7 @@ img {
 
 .aircraft__item {
     font-size: 15px;
-    color: var(--color-text-muted);
+    color: var(--text);
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
@@ -178,7 +172,7 @@ img {
 }
 
 .aircraft__item-light {
-    color: var(--color-text-main);
+    color: var(--nag-text);
     font-weight: 600;
 }
 
@@ -192,7 +186,7 @@ img {
 .button--1 {
     display: block;
     text-align: center;
-    background-color: var(--color-gold);
+    background-color: var(--gold-l);
     color: #0d0f12;
     padding: 16px 32px;
     font-size: 14px;
@@ -204,7 +198,7 @@ img {
 }
 
 .button--1:hover {
-    background-color: var(--color-gold-hover);
+    background-color: var(--gold-d);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
 }
@@ -224,7 +218,7 @@ img {
 }
 
 .aircraft__gallery {
-    position: absolute !important; 
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -257,7 +251,7 @@ img {
 /* strzaleczki*/
 /* kropki */
 .aircraft__gallery .swiper-pagination {
-    bottom: 25px !important;
+    bottom: 25px;
     z-index: 10;
 }
 
@@ -270,7 +264,7 @@ img {
 }
 
 .aircraft__gallery .swiper-pagination-bullet-active {
-    background-color: var(--color-gold);
+    background-color: var(--gold-l);
     transform: scale(1.2);
 }
 
@@ -281,7 +275,7 @@ img {
     height: 46px;
     background-color: rgba(13, 15, 18, 0.7);
     border: 1px solid rgba(197, 168, 128, 0.3);
-    color: var(--color-gold) !important; 
+    color: var(--gold-l); 
     border-radius: 50%;
     z-index: 10;
     transition: var(--transition);
@@ -290,15 +284,15 @@ img {
 
 .aircraft__gallery .swiper-button-prev::after,
 .aircraft__gallery .swiper-button-next::after {
-    font-size: 16px !important;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .aircraft__gallery .swiper-button-prev:hover,
 .aircraft__gallery .swiper-button-next:hover {
-    background-color: var(--color-gold);
-    color: #0d0f12 !important;
-    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+    background-color: var(--gold-l);
+    color: #0d0f12;
+    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);/*mgiełka*/
 }
 
 .aircraft__gallery .swiper-button-prev {
@@ -328,9 +322,9 @@ img {
         min-height: 350px; 
     }
 
-    /* na mobile (bez kierunku) */
+    /* na mobile (bez kierunku strzałek) */
     .aircraft__gallery .swiper-button-prev,
     .aircraft__gallery .swiper-button-next {
-        display: none !important;
+        display: none;
     }
 }
