@@ -122,8 +122,10 @@ img {
 
 @media (min-width: 992px) {
     .aircraft {
+        display: grid;
         grid-template-columns: 1fr 1fr;/* obie kolumny(tekst i zdjęcia) mają idealnie równą wysokość */
         align-items: stretch; 
+        min-height: 600px;
     }
 }
 
@@ -195,6 +197,7 @@ img {
     letter-spacing: 2px;
     border-radius: 6px;
     box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+    transition: var(--transition);
 }
 
 .button--1:hover {
@@ -207,20 +210,17 @@ img {
 .aircraft__gallery-container {
     position: relative;
     width: 100%;
-    min-height: 400px; 
+    height: 100%; 
+    overflow: hidden;
 }
 
 @media (min-width: 992px) {
     .aircraft__gallery-container {
-        min-height: 100%; 
         height: 100%;
     }
 }
 
 .aircraft__gallery {
-    position: absolute; 
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
 }
