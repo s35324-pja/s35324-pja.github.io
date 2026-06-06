@@ -1,5 +1,4 @@
-
-/*zmienne do style1*/
+/* Zmienne do style1 */
 :root {
     --dark: #0d0f12;
     --contener: #16191e;
@@ -27,6 +26,8 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 img {
@@ -34,9 +35,7 @@ img {
     display: block;
 }
 
-
-
-
+/* --- NAWIGACJA I HEADER --- */
 .header {
     background-color: rgba(13, 15, 18, 0.95);
     border-bottom: 1px solid rgba(197, 168, 128, 0.2);
@@ -46,7 +45,7 @@ img {
     backdrop-filter: blur(10px);
 }
 
-.header-container {
+.header-razem {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -55,24 +54,24 @@ img {
     align-items: center;
 }
 
-.brand-logo {
+.logo {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 4px;
     color: var(--nag-text);
 }
 
-.brand-logo span {
+.logo span {
     color: var(--gold-l);
     font-weight: 300;
 }
 
-.nav ul {
+.nawigacja ul {
     display: flex;
     gap: 30px;
 }
 
-.nav-link {
+.link-menu {
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
@@ -82,12 +81,12 @@ img {
     position: relative;
 }
 
-.nav-link:hover, 
-.nav-link.active {
+.link-menu:hover, 
+.link-menu.active {
     color: var(--gold-l);
 }
 
-.nav-link::after {
+.link-menu::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -98,19 +97,19 @@ img {
     transition: var(--transition);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.link-menu:hover::after,
+.link-menu.active::after {
     width: 100%;
 }
 
-
-.section-flota {
+/* --- SEKCJA GŁÓWNA FLOTY --- */
+.sekcja-flota {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.aircraft {
+.pudelko-samolotu {
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--contener);
@@ -121,33 +120,32 @@ img {
 }
 
 @media (min-width: 992px) {
-    .aircraft {
-        display: grid;
-        grid-template-columns: 1fr 1fr;/* obie kolumny(tekst i zdjęcia) mają idealnie równą wysokość */
+    .pudelko-samolotu {
+        grid-template-columns: 1fr 1fr; /* obie kolumny mają idealnie równą wysokość */
         align-items: stretch; 
         min-height: 600px;
     }
 }
 
-/* Lewa str */
-.aircraft__details {
+/* --- LEWA STRONA: TEKST I DANE --- */
+.lewy-tekst {
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.aircraft__ico {
+.samolot-ikona {
     margin-bottom: 15px;
 }
 
-.flota__svg {
+.svg-ikona {
     height: 40px;
     width: auto;
     filter: brightness(0) saturate(100%) invert(75%) sepia(19%) saturate(740%) hue-rotate(354deg) brightness(89%) contrast(85%);
 }
 
-.aircraft__title {
+.tytul-samolotu {
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -159,11 +157,11 @@ img {
     width: max-content;
 }
 
-.aircraft__list {
+.lista-cech {
     margin-bottom: 30px;
 }
 
-.aircraft__item {
+.linia-cechy {
     font-size: 15px;
     color: var(--text);
     padding: 12px 0;
@@ -173,19 +171,19 @@ img {
     align-items: center;
 }
 
-.aircraft__item-light {
+.wartosc-jasna {
     color: var(--nag-text);
     font-weight: 600;
 }
 
-.aircraft__map {
-    margin: 20px 0 0px 0;
+.mapa-zasiegu {
+    margin: 20px 0 20px 0;
     opacity: 1;
     max-height: 120px;
     object-fit: fill;
 }
 
-.button--1 {
+.przycisk-rezerwacja {
     display: block;
     text-align: center;
     background-color: var(--gold-l);
@@ -200,14 +198,14 @@ img {
     transition: var(--transition);
 }
 
-.button--1:hover {
+.przycisk-rezerwacja:hover {
     background-color: var(--gold-d);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
 }
 
-
-.aircraft__gallery-container {
+/* --- PRAWY KONTENER GALERII SWIPER --- */
+.prawy-galeria {
     position: relative;
     width: 100%;
     height: 100%; 
@@ -215,28 +213,28 @@ img {
 }
 
 @media (min-width: 992px) {
-    .aircraft__gallery-container {
+    .prawy-galeria {
         height: 100%;
     }
 }
 
-.aircraft__gallery {
+.moja-karuzela {
     width: 100%;
     height: 100%;
 }
 
-.aircraft__gallery .swiper-slide {
+.moja-karuzela .swiper-slide {
     height: 100%; 
 }
 
-.aircraft__img {
+.fotka-samolotu {
     width: 100%;
     height: 100%;
     object-fit: cover; 
 }
 
-
-.aircraft__gallery-container::after {
+/* Cieniowanie dołu zdjęcia */
+.prawy-galeria::after {
     content: '';
     position: absolute;
     top: 0;
@@ -248,14 +246,13 @@ img {
     z-index: 2;
 }
 
-/* strzaleczki*/
-/* kropki */
-.aircraft__gallery .swiper-pagination {
+/* Kropki nawigacji */
+.moja-karuzela .swiper-pagination {
     bottom: 25px;
     z-index: 10;
 }
 
-.aircraft__gallery .swiper-pagination-bullet {
+.moja-karuzela .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -263,14 +260,14 @@ img {
     transition: var(--transition);
 }
 
-.aircraft__gallery .swiper-pagination-bullet-active {
+.moja-karuzela .swiper-pagination-bullet-active {
     background-color: var(--gold-l);
     transform: scale(1.2);
 }
 
-/* Strzałki boczne */
-.aircraft__gallery .swiper-button-prev,
-.aircraft__gallery .swiper-button-next {
+/* Strzałki boczne karuzeli */
+.moja-karuzela .swiper-button-prev,
+.moja-karuzela .swiper-button-next {
     width: 46px;
     height: 46px;
     background-color: rgba(13, 15, 18, 0.7);
@@ -281,50 +278,49 @@ img {
     transition: var(--transition);
 }
 
-
-.aircraft__gallery .swiper-button-prev::after,
-.aircraft__gallery .swiper-button-next::after {
+.moja-karuzela .swiper-button-prev::after,
+.moja-karuzela .swiper-button-next::after {
     font-size: 16px;
     font-weight: bold;
 }
 
-.aircraft__gallery .swiper-button-prev:hover,
-.aircraft__gallery .swiper-button-next:hover {
+.moja-karuzela .swiper-button-prev:hover,
+.moja-karuzela .swiper-button-next:hover {
     background-color: var(--gold-l);
     color: #0d0f12;
-    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);/*mgiełka*/
+    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4); /* Mgiełka */
 }
 
-.aircraft__gallery .swiper-button-prev {
+.moja-karuzela .swiper-button-prev {
     left: 25px;
 }
 
-.aircraft__gallery .swiper-button-next {
+.moja-karuzela .swiper-button-next {
     right: 25px;
 }
 
-/*rozne rozmiary*/
+/* --- RESPONSYWNOŚĆ --- */
 @media (max-width: 768px) {
-    .header-container {
+    .header-razem {
         flex-direction: column;
         gap: 15px;
     }
     
-    .aircraft__details {
+    .lewy-tekst {
         padding: 30px 20px;
     }
     
-    .aircraft__title {
+    .tytul-samolotu {
         font-size: 26px;
     }
     
-    .aircraft__gallery-container {
+    .prawy-galeria {
         min-height: 350px; 
     }
 
-    /* na mobile (bez kierunku strzałek) */
-    .aircraft__gallery .swiper-button-prev,
-    .aircraft__gallery .swiper-button-next {
+    /* Ukrywanie strzałek na telefonach */
+    .moja-karuzela .swiper-button-prev,
+    .moja-karuzela .swiper-button-next {
         display: none;
     }
 }
