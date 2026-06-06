@@ -19,8 +19,8 @@ body {
     cursor: url('data:image/svg+xml;utf8,<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146" width="32" height="32"><path fill="none" stroke="%23ffffff" stroke-width="5.8" d="M45,10s-3,5-3,10,1,9,1,9l9,23s.5,1,0,1-6,8-6,8l-1-3-5-1-3,2,0,3,2,6-25,31,3,9,46-34s8,20,8,21,7,11,7,13,1,2,0,3-12,13-12,15l2,6,18-12s2,2,5,3c0-6,0-6,0-6l22-2s-2-6-2-6-21-3-21-4-3-15-4-16c-1-2-8-21-8-21l57-6s-3-8-3-8c-1,0-41-6-41-6s-3-8-3-8-2-2-3-2-4,1-4,2,0,3,0,3l-11-2s-9-24-9-25-3-5-6-8-8-5-8-5l-2,1Z"/></svg>') 10 3, auto;
 }
 
-a, button, input, select, textarea, .moja-karuzela .swiper-button-prev,
-.moja-karuzela .swiper-button-next {
+a, button, input, select, textarea, .kropeczki .swiper-button-prev,
+.kropeczki .swiper-button-next {
     cursor: url('data:image/svg+xml;utf8,<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 146" width="32" height="32"><path fill="%23ffffff" d="M45,10s-3,5-3,10,1,9,1,9l9,23s.5,1,0,1-6,8-6,8l-1-3-5-1-3,2,0,3,2,6-25,31,3,9,46-34s8,20,8,21,7,11,7,13,1,2,0,3-12,13-12,15l2,6,18-12s2,2,5,3c0-6,0-6,0-6l22-2s-2-6-2-6-21-3-21-4-3-15-4-16c-1-2-8-21-8-21l57-6s-3-8-3-8c-1,0-41-6-41-6s-3-8-3-8-2-2-3-2-4,1-4,2,0,3,0,3l-11-2s-9-24-9-25-3-5-6-8-8-5-8-5l-2,1Z"/></svg>') 10 3, pointer;
 }
 
@@ -228,12 +228,12 @@ img {
     }
 }
 
-.moja-karuzela {
+.kropeczki {
     width: 100%;
     height: 100%;
 }
 
-.moja-karuzela .swiper-slide {
+.kropeczki .swiper-slide {
     height: 100%; 
 }
 
@@ -257,12 +257,12 @@ img {
 }
 
 /* Kropki nawigacji */
-.moja-karuzela .swiper-pagination {
+.kropeczki .swiper-pagination {
     bottom: 25px;
     z-index: 10;
 }
 
-.moja-karuzela .swiper-pagination-bullet {
+.kropeczki .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -270,14 +270,14 @@ img {
     transition: var(--transition);
 }
 
-.moja-karuzela .swiper-pagination-bullet-active {
+.kropeczki .swiper-pagination-bullet-active {
     background-color: var(--gold-l);
     transform: scale(1.2);
 }
 
 /* Strzałki boczne karuzeli */
-.moja-karuzela .swiper-button-prev,
-.moja-karuzela .swiper-button-next {
+.kropeczki .swiper-button-prev,
+.kropeczki .swiper-button-next {
     width: 46px;
     height: 46px;
     background-color: rgba(13, 15, 18, 0.7);
@@ -288,24 +288,24 @@ img {
     transition: var(--transition);
 }
 
-.moja-karuzela .swiper-button-prev::after,
-.moja-karuzela .swiper-button-next::after {
+.kropeczki .swiper-button-prev::after,
+.kropeczki .swiper-button-next::after {
     font-size: 16px;
     font-weight: bold;
 }
 
-.moja-karuzela .swiper-button-prev:hover,
-.moja-karuzela .swiper-button-next:hover {
+.kropeczki .swiper-button-prev:hover,
+.kropeczki .swiper-button-next:hover {
     background-color: var(--gold-l);
     color: #0d0f12;
     box-shadow: 0 0 15px rgba(197, 168, 128, 0.4); /* Mgiełka */
 }
 
-.moja-karuzela .swiper-button-prev {
+.kropeczki .swiper-button-prev {
     left: 25px;
 }
 
-.moja-karuzela .swiper-button-next {
+.kropeczki .swiper-button-next {
     right: 25px;
 }
 
@@ -329,8 +329,8 @@ img {
     }
 
     /* Ukrywanie strzałek na telefonach */
-    .moja-karuzela .swiper-button-prev,
-    .moja-karuzela .swiper-button-next {
+    .kropeczki .swiper-button-prev,
+    .kropeczki .swiper-button-next {
         display: none;
     }
 }
