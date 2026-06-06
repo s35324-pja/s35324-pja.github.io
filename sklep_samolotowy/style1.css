@@ -167,6 +167,18 @@ img {
     width: max-content;
 }
 
+.jet-informacje {
+    font-size: 13px;
+    color: var(--gold-l);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.jet-informacje:hover {
+    color: var(--nag-text);
+    text-decoration: none;
+} 
+
 .lista-cech {
     margin-bottom: 30px;
 }
