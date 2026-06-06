@@ -42,7 +42,10 @@ img {
     display: block;
 }
 
-/* --- NAWIGACJA I HEADER --- */
+
+
+
+
 .header {
     background-color: rgba(13, 15, 18, 0.95);
     border-bottom: 1px solid rgba(197, 168, 128, 0.2);
@@ -134,7 +137,7 @@ img {
     }
 }
 
-/* --- LEWA STRONA: TEKST I DANE --- */
+/* LEWA STRONA: */
 .lewy-tekst {
     padding: 40px;
     display: flex;
@@ -147,12 +150,12 @@ img {
 }
 
 .svg-ikona {
-    height: 40px;
-    width: auto;
+    height: 100px;
+    width: max-content;
     filter: brightness(0) saturate(100%) invert(75%) sepia(19%) saturate(740%) hue-rotate(354deg) brightness(89%) contrast(85%);
 }
 
-.tytul-samolotu {
+.nazwa-samolotu {
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 1px;
