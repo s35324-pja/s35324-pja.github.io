@@ -328,7 +328,7 @@ img {
         min-height: 350px; 
     }
 
-    /* Ukrywanie strzałek na telefonach */
+    /* Ukrywanie strzałek na telefonach - nie sa potrzebne */
     .kropeczki .swiper-button-prev,
     .kropeczki .swiper-button-next {
         display: none;
