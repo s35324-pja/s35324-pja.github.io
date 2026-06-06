@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,51 +9,45 @@
 <body>
 
     <header class="header">
-        <div class="header-container">
-            <div class="brand-logo">AERO<span>PRIVÉ</span></div>
-            <nav class="nav">
+        <div class="header-razem">
+            <div class="logo">AERO<span>PRIVÉ</span></div>
+            <nav class="nawigacja">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="flota.html" class="nav-link">Nasza Flota</a></li>
-                    <li><a href="charter.html" class="nav-link active">Kontakt</a></li>
+                    <li><a href="index.html" class="link-menu">Home</a></li>
+                    <li><a href="flota.html" class="link-menu">Nasza Flota</a></li>
+                    <li><a href="charter.html" class="link-menu active">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="page-padding">
-        <section class="charter-container">
-            <div class="charter-form-header">
+    <main class="odstep-strony">
+        <section class="formularz-sekcja">
+            <div class="formularz-naglowek">
                 <h2>Formularz Prywatnego Rejsu</h2>
-                <p>Wypełnij poniższe dane, aby przydzielony do Ciebie opiekun luksusowy przygotował wstępną wycenę i w pełni optymalny plan logistyczny lotu twojego lotu.</p>
+                <p>Wypełnij poniższe dane, aby przydzielony do Ciebie opiekun luksusowy przygotował wstępną wycenę i w pełni optymalny plan logistyczny lotu.</p>
             </div>
 
-            <div class="charter-roz">
-                <div class="form-card">
-                    <form action="#" method="POST" class="form">
-                        
-                            <div class="form-group">
-                                <label for="vip-name">Imię i Nazwisko Pasażera Głównego</label>
-                                <input type="text" id="vip-name" name="vip-name" placeholder="Imię i Nazwisko" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="vip-email">Prywatny Adres E-mail</label>
-                                <input type="email" id="vip-email" name="vip-email" placeholder="adres@przykładowy.com" required>
-                            </div>
-                        
-
-                        
-                            <div class="form-group">
-                                <label for="route-from">Miejsce Wylotu (Lotnisko / Miasto)</label>
-                                <input type="text" id="route-from" name="route-from" placeholder="np. Warszawa (EPWA)" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="route-to">Destynacja Docelowa</label>
-                                <input type="text" id="route-to" name="route-to" placeholder="np. New York (JFK)" required>
-                            </div>
-                       
-
-                        <div class="form-group">
+            <div class="formularz-uklad">
+                <div class="karta-formularza">
+                    <form action="#" method="POST" class="formularz">
+                        <div class="pole-formularza">
+                            <label for="vip-name">Imię i Nazwisko Pasażera Głównego</label>
+                            <input type="text" id="vip-name" name="vip-name" placeholder="Imię i Nazwisko" required>
+                        </div>
+                        <div class="pole-formularza">
+                            <label for="vip-email">Prywatny Adres E-mail</label>
+                            <input type="email" id="vip-email" name="vip-email" placeholder="adres@przykładowy.com" required>
+                        </div>
+                        <div class="pole-formularza">
+                            <label for="route-from">Miejsce Wylotu (Lotnisko / Miasto)</label>
+                            <input type="text" id="route-from" name="route-from" placeholder="np. Warszawa (EPWA)" required>
+                        </div>
+                        <div class="pole-formularza">
+                            <label for="route-to">Destynacja Docelowa</label>
+                            <input type="text" id="route-to" name="route-to" placeholder="np. New York (JFK)" required>
+                        </div>
+                        <div class="pole-formularza">
                             <label for="jet-class">Pożądana Klasa Statku Powietrznego</label>
                             <select id="jet-class" name="jet-class">
                                 <option value="large">Large Jet (np. Embraer Legacy 600)</option>
@@ -62,22 +56,18 @@
                                 <option value="large/long">Large/ Long Range (np. Bombardier Global 5000)</option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="special-w">Wymagania Specjalne (Concierge, Catering, Zwierzęta na pokładzie)</label>
-                            <textarea id="special-w" name="special-wishes" rows="4" placeholder="np. Obsługa limousine-to-aircraft, dedykowane menu wegańskie, transport dzieł sztuki..."></textarea>
+                        <div class="pole-formularza">
+                            <label for="special-w">Wymagania Specjalne (Concierge, Catering, Zwierzęta)</label>
+                            <textarea id="special-w" name="special-wishes" rows="4" placeholder="np. Obsługa limousine-to-aircraft, dedykowane menu wegańskie..."></textarea>
                         </div>
-
-                        <button type="submit" class="gold-submit-btn">Wyślij Zapytanie</button>
+                        <button type="submit" class="przycisk-wyslij">Wyślij Zapytanie</button>
                     </form>
                 </div>
 
-                <div class="info-card">
-                    <h3>AeroPrivé Global Fruuu</h3>
-                    <div class="mały-break"></div>
-                    <p class="concierge-desc">Nasz zespół operacyjny monitoruje przestrzeń powietrzną i dostępność maszyn 24/7/365.</p>
-                    
-                    <div class="contact-details-blok">
+                <div class="karta-boczna-info">
+                    <h3>AeroPrivé Global</h3>
+                    <p class="info-opis">Nasz zespół operacyjny monitoruje przestrzeń powietrzną i dostępność maszyn 24/7/365.</p>
+                    <div class="dane-kontaktowe">
                         <p><strong>Infolinia:</strong> +00 000 000 000</p>
                         <p><strong>E-mail:</strong> s35324@pjwstk.edu.pl</p>
                         <p><strong>Główna Siedziba:</strong> Warszawa</p>
@@ -87,11 +77,9 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-txt">
-            <p>&copy; 2026 AeroPrivé Luxury Aviation. Wszelkie prawa zastrzeżone.</p>
-            <p class="moje">Projekt: <strong>Hanna Drozdowska</strong> <br> Indeks studenta: <strong>s35324</strong></p>
-        </div>
+    <footer class="stopka">
+        <p>&copy; 2026 AeroPrivé Luxury Aviation. Wszelkie prawa zastrzeżone.</p>
+        <p class="autor">Projekt: <strong>Hanna Drozdowska</strong> <br> Indeks studenta: <strong>s35324</strong></p>
     </footer>
 
 </body>
