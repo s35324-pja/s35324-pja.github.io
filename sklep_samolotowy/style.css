@@ -137,7 +137,7 @@ main {
 .tekst-wstep { 
     color: #9ca3af; 
     font-size: 1.1rem; 
-    margin-bottom: 2.5rem; 
+    margin: 40px 0 20px 0; 
 }
 
 .hulu {
@@ -159,6 +159,7 @@ main {
     transition: all 0.4s ease;
     display: inline-block;
     border-radius: 6px;
+    margin-top: 30px;
 }
 
 .przycisk-zloty { 
@@ -207,7 +208,7 @@ main {
 /* --- SEKCJA ATUTY (ZAKŁADKI) --- */
 .atuty-sekcja { 
     max-width: 1300px;
-    margin: 6rem auto; 
+    margin: 150px auto; 
     padding: 0 2rem;
 }
 
