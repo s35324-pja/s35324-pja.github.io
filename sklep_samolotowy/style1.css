@@ -62,7 +62,7 @@ img {
     backdrop-filter: blur(10px);
 }
 
-.header-razem {
+.header-menu {
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
@@ -121,7 +121,17 @@ img {
     width: 100%;
 }
 
-/* --- SEKCJA GŁÓWNA FLOTY --- */
+
+
+
+
+
+
+
+
+
+
+/* SEKCJA GŁÓWNA  */
 .back { 
     text-decoration: none;
     padding: 1rem 2.5rem;
@@ -160,11 +170,18 @@ img {
 
 @media (min-width: 992px) {
     .pudelko-samolotu {
-        grid-template-columns: 1fr 1fr; /* obie kolumny mają idealnie równą wysokość */
+        grid-template-columns: 1fr 1fr;
         align-items: stretch; 
         min-height: 600px;
     }
 }
+
+
+
+
+
+
+
 
 /* LEWA STRONA: */
 .lewy-tekst {
@@ -264,7 +281,10 @@ img {
     box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
 }
 
-/* --- PRAWY KONTENER GALERII SWIPER --- */
+
+
+
+/* GALERIA */
 .prawy-galeria {
     position: relative;
     width: 100%;
@@ -306,6 +326,8 @@ img {
     z-index: 2;
 }
 
+
+
 /* Kropki nawigacji */
 .kropeczki .swiper-pagination {
     bottom: 25px;
@@ -325,7 +347,7 @@ img {
     transform: scale(1.2);
 }
 
-/* Strzałki boczne karuzeli */
+/* Strzałki boczne */
 .kropeczki .swiper-button-prev,
 .kropeczki .swiper-button-next {
     width: 46px;
@@ -359,9 +381,17 @@ img {
     right: 25px;
 }
 
-/* --- RESPONSYWNOŚĆ --- */
+
+
+
+
+
+
+
+
+/* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
-    .header-razem {
+    .header-menu {
         flex-direction: column;
         gap: 15px;
     }
