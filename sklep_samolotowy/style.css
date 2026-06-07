@@ -82,7 +82,8 @@ main {
     transition: var(--transition);
 }
 
-.link-menu:hover, .link-menu.active { 
+.link-menu:hover, 
+.link-menu.active { 
     color: var(--gold); 
 }
 
