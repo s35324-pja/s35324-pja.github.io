@@ -1,3 +1,4 @@
+/* ROZPISKA KOLOROW/ BAZA */
 :root {
     --dark: #0a0d14;
     --gold: #c5a059;
@@ -30,7 +31,7 @@ a, button, input, select, textarea {
 }
 
 
-/* --- NAGŁÓWEK I NAWIGACJA --- */
+/* NAZWA I MENU */
 .header {
     background-color: rgba(10, 13, 20, 0.95);
     border-bottom: 1px solid var(--border);
@@ -100,7 +101,7 @@ a, button, input, select, textarea {
     width: 100%;
 }
 
-/* --- SEKCJA GŁÓWNA (HERO) --- */
+/* STRONA GŁÓWNA */
 .glowna-sekcja { 
     display: flex; 
     align-items: center; 
@@ -146,7 +147,7 @@ a, button, input, select, textarea {
     gap: 1.5rem; 
 }
 
-/* --- UNIWERSALNE PRZYCISKI --- */
+/* PRZYCISKI */
 .przycisk-zloty, .przycisk-szary {
     text-decoration: none;
     padding: 1rem 2.5rem;
@@ -202,7 +203,7 @@ a, button, input, select, textarea {
     }
 }
 
-/* --- SEKCJA ATUTY (ZAKŁADKI) --- */
+/* ATUTY FIRMY (ZAKŁADKI) */
 .atuty-sekcja { 
     max-width: 1300px;
     margin: 8rem auto; 
@@ -257,7 +258,20 @@ a, button, input, select, textarea {
     font-size: 0.95rem; 
 }
 
-/* --- STRONA FLOTA --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* STRONA FLOTA */
 .odstep-strony {
     max-width: 1300px;
     margin: 4rem auto 6rem auto;
@@ -366,7 +380,22 @@ a, button, input, select, textarea {
     color: var(--goldL); 
 }
 
-/* --- FORMULARZ CHARTER --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORMULARZ */
 .formularz-naglowek { 
     text-align: center; 
     max-width: 750px; 
@@ -472,7 +501,25 @@ a, button, input, select, textarea {
     color: #d1d5db; 
 }
 
-/* --- STOPKA --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* STOPA */
 .stopka { 
     background-color: #05070b; 
     border-top: 1px solid var(--border); 
@@ -491,7 +538,27 @@ a, button, input, select, textarea {
     color: var(--gold); 
 }
 
-/* --- RESPONSYWNOŚĆ --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ROZDZIELCZOSC/ EKRANY */
 @media (max-width: 992px) {
     .formularz-uklad { 
         flex-direction: column; 
