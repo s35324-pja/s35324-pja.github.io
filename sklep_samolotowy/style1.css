@@ -122,30 +122,24 @@ img {
 }
 
 /* --- SEKCJA GŁÓWNA FLOTY --- */
-.back {
-    display: inside;
-    text-align: left;
-    background-color: var(--goldL);
-    opacity: 0.8;
-    color: #0d0f12;
-    padding: 13px 14px;
-    font-size: 14px;
-    font-weight: 700;
+.back { 
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
-    transition: var(--transition);
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    display: inline-block;
+    background-color: transparent; 
+    color: var(--textop); 
+    border: 1px solid var(--border);
+    border-radius: 12px; 
+    font-weight: 400; 
 }
 
 .back:hover {
-    background-color: var(--gold);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
+    border-color: var(--gold); 
+    color: var(--gold); 
 }
 
 .sekcja-flota {
@@ -203,15 +197,24 @@ img {
 }
 
 .jet-informacje {
-    font-size: 13px;
-    color: var(--goldL);
-    text-decoration: underline;
-    font-weight: 500;
+    display: block;
+    text-align: center;
+    background-color: var(--goldL);
+    color: #0d0f12;
+    padding: 16px 16px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+    transition: var(--transition);
 }
 
 .jet-informacje:hover {
-    color: var(--light);
-    text-decoration: none;
+    background-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 168, 128, 0.4);
 } 
 
 .lista-cech {
@@ -234,7 +237,7 @@ img {
 }
 
 .mapa-zasiegu {
-    margin: 20px 0 20px 0;
+    margin: 20px 0px 50px 0;
     opacity: 1;
     max-height: 120px;
     object-fit: fill;
