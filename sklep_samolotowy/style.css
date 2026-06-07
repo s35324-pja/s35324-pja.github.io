@@ -101,6 +101,14 @@ a, button, input, select, textarea {
     width: 100%;
 }
 
+
+
+
+
+
+
+
+
 /* STRONA GŁÓWNA */
 .glowna-sekcja { 
     display: flex; 
@@ -191,17 +199,25 @@ a, button, input, select, textarea {
 .svg-samolot { 
     width: 100%; 
     max-width: 440px; 
-    animation: luxuryCruise 5s ease-in-out infinite; 
+    animation: airplane 5s ease-in-out infinite; 
 }
 
-@keyframes luxuryCruise {
+@keyframes airplane {
     0%, 100% { 
         transform: translateY(0px) rotate(0deg); 
     }
+
     50% { 
         transform: translateY(-12px) rotate(-5deg); 
     }
 }
+
+
+
+
+
+
+
 
 /* ATUTY FIRMY (ZAKŁADKI) */
 .atuty-sekcja { 
@@ -330,10 +346,18 @@ a, button, input, select, textarea {
     gap: 3rem; 
 }
 
-.karta-samolotu { 
+.karta-samolotu {
+    display: block; 
     background-color: rgba(255, 255, 255, 0.02); 
     border: 1px solid var(--border); 
     overflow: hidden; 
+    transition: var(--transition);
+}
+
+.karta-samolotu:hover {
+    border-color: var(--gold);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(197, 168, 128, 0.1);
 }
 
 .obrazek-samolotu { 
@@ -341,12 +365,6 @@ a, button, input, select, textarea {
     width: 100%; 
     display: block; 
     object-fit: cover; 
-}
-
-.obrazek-samolotu:hover {
-   border-color: var(--gold); 
-    transform: translateY(-2px); 
-    box-shadow: 0 10px 50px rgba(218, 176, 117, 0.2); 
 }
 
 
@@ -396,6 +414,26 @@ a, button, input, select, textarea {
 
 
 /* FORMULARZ */
+.back { 
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    display: inline-block;
+    background-color: transparent; 
+    color: var(--textop); 
+    border: 1px solid var(--border);
+    border-radius: 12px; 
+    font-weight: 400; 
+}
+
+.back:hover {
+    border-color: var(--gold); 
+    color: var(--gold); 
+}
+
 .formularz-naglowek { 
     text-align: center; 
     max-width: 750px; 
@@ -597,7 +635,7 @@ a, button, input, select, textarea {
         gap: 1rem; 
     }
 
-    .header-razem { 
+    .header-menu { 
         flex-direction: column; 
         gap: 1.5rem; 
     }
