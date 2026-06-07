@@ -6,6 +6,7 @@
     --textD: #111827;
     --light: #ffffff;
     --border: #222938;
+    --transition: all 0.3s ease;
 }
 
 body {
@@ -36,6 +37,7 @@ main {
     top: 0;
     z-index: 100;
     padding: 1.5rem 0;
+    backdrop-filter: blur(10px);
 }
 
 .header-razem {
@@ -71,11 +73,29 @@ main {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    transition: color 0.3s;
+    padding: 5px 0;         
+    position: relative;     
+    transition: var(--transition);
 }
 
 .link-menu:hover, .link-menu.active { 
     color: var(--gold); 
+}
+
+.link-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--goldL);
+    transition: var(--transition);
+}
+
+.link-menu:hover::after,
+.link-menu.active::after {
+    width: 100%;
 }
 
 /* --- SEKCJA GŁÓWNA (HERO) --- */
