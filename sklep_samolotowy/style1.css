@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;;
+    font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;
     background-color: var(--dark);
     color: var(--text);
     letter-spacing: 0.5px;
