@@ -41,7 +41,7 @@ a, button, input, select, textarea {
     top: 0;
     z-index: 100;
     padding: 1.5rem 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
 }
 
 .header-menu {
